@@ -1,4 +1,37 @@
 .Enrollment{
     background-color: rgb(226, 209, 201);
     text-align: center;
+    margin: 2px 500px 0px 250px;
+    width: 1000px;
+    height: 50px;
+    border-style: hidden;
+    border-radius: 105px;
+}
+.Enrollmentformhead{
+    text-align: center;
+}
+h3{
+    text-align: center;
+}
+.logo{
+    margin: 15px 0px 0px 20px;
+    position: relative;
+    bottom: 150px;
+}
+.Collegeimg{
+    display: flex;
+    gap: 10px;
+    border-radius: 50px;
+    margin: 10px 10px 10px 300px;
+    
+}
+.Studentdetails{
+    height: 500px;
+    width: 900px;
+    background-color: aliceblue;
+    border: 5px solid black;
+    border-radius: 10px;
+    text-align: left;
+    margin: 100px 0px 0px 300px; 
+    
 }
