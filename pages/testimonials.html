@@ -27,14 +27,14 @@
             }
         }
 
-        .home-container {
+        /* .home-container {
             width: 95%;
             height: 90vh;
             background-color: whitesmoke;
             margin: 5% auto;
             border-radius: 20px;
             box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.5);
-        }
+        } */
 
         .logo img {
             height: 80px;
@@ -43,24 +43,65 @@
             /* Space between logo and navigation links */
         }
 
+        .home-container {
+            display: flex;
+            /* Ensure the container uses flexbox */
+            flex-direction: row;
+            /* Align children horizontally */
+            align-items: stretch;
+            /* Stretch items to fill the container height */
+            width: 95%;
+            height: 90vh;
+            background-color: whitesmoke;
+            margin: 3% auto;
+            padding: 2%;
+            /* Center the container */
+            border-radius: 20px;
+            box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.5);
+            padding-left: 2%;
+            /* Add padding to the left to create space for nav */
+        }
+
         nav {
-            width: 15vw;
-            /* Define a specific width for the navigation bar */
-            height: 95%;
+            width: 25%;
+            /* Set a fixed percentage width for the nav */
+            max-width: 300px;
+            /* Maximum width to maintain design on larger screens */
+            height: 100%;
+            /* Full height of the container */
             display: flex;
             flex-direction: column;
             align-items: center;
             padding: 0;
-            /* Remove padding here if it's causing issues */
             background: rgb(78, 215, 255);
             background: linear-gradient(90deg, rgba(78, 215, 255, 1) 0%, rgba(196, 251, 255, 1) 44%);
             border-radius: 20px;
             box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.5);
             color: white;
-            position: relative;
-            top: 2%;
-            bottom: 2%;
-            left: 2%;
+            margin-right: 2%;
+            /* Add margin to the right of nav */
+        }
+
+        @media only screen and (max-width: 600px) {
+            .home-container {
+                flex-direction: column;
+                /* Stack children vertically on small screens */
+                width: 90%;
+                height: auto;
+                /* Adjust height to content */
+                margin: 2% auto;
+                padding: 0;
+                /* Remove padding on small screens */
+            }
+
+            nav {
+                width: 100%;
+                /* Nav takes full width on small screens */
+                height: auto;
+                /* Adjust height to content */
+                margin: 0;
+                /* Remove margin to fit full width */
+            }
         }
 
         .sidebar ul {
@@ -100,7 +141,7 @@
             background: rgb(32, 9, 148);
             background: linear-gradient(90deg, rgba(32, 9, 148, 1) 0%, rgba(53, 51, 205, 1) 44%);
             width: 100%;
-            
+
             /* Full width for each list item */
             padding: 10px 20px;
             /* Adjust padding as needed */
