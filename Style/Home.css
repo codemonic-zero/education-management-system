@@ -78,11 +78,3 @@ button{
     display: inline-block; 
     margin-right: 30px;
 }
-@media only screen and (max-width: 600px) {
-    .home-container {
-        width: 90%;
-        height: 80vh;
-        margin: 2% auto;
-        /* Updated to center horizontally */
-    }
-}
