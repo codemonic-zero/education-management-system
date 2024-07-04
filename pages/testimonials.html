@@ -5,14 +5,153 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="../style/testimonials.css">
+    <!-- <link rel="stylesheet" href="../style/testimonials.css"> -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-image: url("../images/home/body-bg.png");
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        @media only screen and (max-width: 600px) {
+            .home-container {
+                width: 90%;
+                height: 80vh;
+                margin: 2% auto;
+                /* Updated to center horizontally */
+            }
+        }
+
+        .home-container {
+            width: 95%;
+            height: 90vh;
+            background-color: whitesmoke;
+            margin: 5% auto;
+            border-radius: 20px;
+            box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.5);
+        }
+
+        .logo img {
+            height: 80px;
+            /* Adjust size as needed */
+            margin-bottom: 20px;
+            /* Space between logo and navigation links */
+        }
+
+        nav {
+            width: 15vw;
+            /* Define a specific width for the navigation bar */
+            height: 95%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 0;
+            /* Remove padding here if it's causing issues */
+            background: rgb(78, 215, 255);
+            background: linear-gradient(90deg, rgba(78, 215, 255, 1) 0%, rgba(196, 251, 255, 1) 44%);
+            border-radius: 20px;
+            box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.5);
+            color: white;
+            position: relative;
+            top: 2%;
+            bottom: 2%;
+            left: 2%;
+        }
+
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            /* Ensure no default margin */
+            width: 100%;
+            /* Ensure the sidebar takes full width of the nav */
+            text-align: center;
+        }
+
+        .sidebar ul li {
+            display: inline-block;
+            margin: 0;
+            /* Remove margin to ensure full width usage */
+            font-size: 30px;
+            font-weight: bold;
+            background: linear-gradient(90deg, rgba(32, 9, 148, 1) 0%, rgba(53, 51, 205, 1) 44%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            color: transparent;
+            /* Fallback for non-webkit browsers */
+            width: 100%;
+            /* Full width for each list item */
+            padding: 10px 20px;
+            /* Adjust padding as needed */
+            box-sizing: border-box;
+            /* Include padding and border in the element's width */
+        }
+
+        .sidebar ul li:hover {
+            display: inline-block;
+            margin: 0;
+            /* Remove margin to ensure full width usage */
+            background: rgb(32, 9, 148);
+            background: linear-gradient(90deg, rgba(32, 9, 148, 1) 0%, rgba(53, 51, 205, 1) 44%);
+            width: 100%;
+            
+            /* Full width for each list item */
+            padding: 10px 20px;
+            /* Adjust padding as needed */
+            box-sizing: border-box;
+            /* Include padding and border in the element's width */
+        }
+
+        .sidebar ul li a {
+            text-decoration: none;
+            color: rgba(71, 215, 234, 0.999);
+            font-weight: bold;
+            display: block;
+            width: 100%;
+            /* Full width for the link */
+            padding: 10px 0;
+            /* Padding for top and bottom, horizontal padding handled by li */
+        }
+
+        .sidebar ul li a:hover {
+            text-decoration: none;
+            font-size: 30px;
+            font-weight: bold;
+            background: linear-gradient(90deg, rgba(78, 215, 255, 1) 0%, rgba(196, 251, 255, 1) 44%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            color: transparent;
+            display: block;
+            width: 100%;
+            /* Full width for the link */
+            padding: 10px 0;
+            /* Padding for top and bottom, horizontal padding handled by li */
+        }
+    </style>
 </head>
 
 <body>
 
     <div class="home-container">
         <nav>
-            
+            <div class="logo">
+                <img src="../images/home/logo.png" alt="Company Logo">
+            </div>
+            <div class="sidebar">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
         </nav>
     </div>
 </body>

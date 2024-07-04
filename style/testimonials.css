@@ -4,19 +4,9 @@
 }
 
 body {
-    background-image: url("../images/bg-color.png");
+    background-image: url("../images/home/body-bg.png");
     background-size: cover;
     background-repeat: no-repeat;
-}
-
-.home-container {
-    width: 95%;
-    height: 90vh;
-    background-color: whitesmoke;
-    margin: 3% auto;
-    /* Updated to center horizontally */
-    border-radius: 20px;
-    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.5);
 }
 
 @media only screen and (max-width: 600px) {
@@ -28,14 +18,30 @@ body {
     }
 }
 
-nav{
-    width: 15vw;
+.home-container {
+    width: 95%;
+    height: 90vh;
+    background-color: whitesmoke;
+    margin: 5% auto;
+    border-radius: 20px;
+    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.5);
+}
+
+.logo img {
+    height: 80px; /* Adjust size as needed */
+    margin-bottom: 20px; /* Space between logo and navigation links */
+}
+
+nav {
+    width: 15vw; /* Define a specific width for the navigation bar */
     height: 95%;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: center;
     padding: 0 20px;
-    background-color: rgb(100, 197, 250);
+    background-color: rgba(71, 215, 234, 0.999);
+    border-radius: 20px;
+    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.5);
     color: white;
     position: relative;
     top: 2%;
@@ -43,3 +49,28 @@ nav{
     left: 2%;
 }
 
+.sidebar ul {
+    list-style: armenian;
+    padding: 0;
+    width: 100%; /* Ensure the sidebar takes full width of the nav */
+    padding: 20px;
+    text-align: center;
+}
+
+.sidebar ul li {
+    display: block;
+    margin: 10px 0;
+    background-color: #f2f2f2;
+    width: 100%; /* Full width for each list item */
+    padding: 10px 0;
+    border-radius: 5px;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    display: block;
+    width: 100%; /* Full width for the link */
+    padding: 10px 20px;
+}
