@@ -3,7 +3,7 @@
     padding:0;
 }
 body{
-    background-image: url("../Images/Home/img.png");
+    background-image: url("../images/home/img.png");
     background-size: cover;
     background-repeat: no-repeat;
     font-family: "Kanit", sans-serif;
@@ -14,7 +14,7 @@ body{
     height: 90vh;
     margin: 50px;
     border-radius: 20px;
-    background-image: url("../Images/Home/bgimg.png");
+    background-image: url("../images/home/bgimg.png");
     box-shadow: 0 0 10px 5px rgba(0,0,0,0.5);
 }
 
