@@ -27,3 +27,19 @@ body {
         /* Updated to center horizontally */
     }
 }
+
+nav{
+    width: 15vw;
+    height: 95%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    background-color: rgb(100, 197, 250);
+    color: white;
+    position: relative;
+    top: 2%;
+    bottom: 2%;
+    left: 2%;
+}
+
