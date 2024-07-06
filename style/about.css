@@ -1,0 +1,114 @@
+.about-us {
+    margin-left: 60px;
+
+}
+
+body {
+    background-image: url(../images/home/body-bg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+}
+
+.container{
+    width: 94vw;
+    height: auto;
+    margin: 50px;
+    border-radius: 20px;
+    background-color: white;
+    box-shadow: 0 0 10px 5px rgba(0,0,0,0.5);
+}
+
+.about {
+    font-weight: bolder;
+    margin-top: 30px;
+    margin-left: 35px;
+    padding: 40px 0;
+    text-align: center;
+    color:black;
+    font-size: 2rem;
+
+    
+    
+}
+
+.team-container1{
+    padding-bottom: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+.team-container2{
+    padding-bottom: 10px;
+    padding :10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.team-member {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.team-member img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+    
+}
+
+.team-member:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.team-member:hover img {
+    transform: scale(1.1);
+}
+
+.heading {
+    height: 70px;
+    width: 100;
+    display:flex ;
+    justify-content: space-evenly;
+    margin-left: auto;
+}
+
+.member {
+    color: black;
+    text-align: center;
+    font-size: 1.5rem;
+    text-transform: capitalize;
+
+
+
+}
+
+.member1 {
+    color:white;
+    text-align: center;
+    font-size: 2rem;
+    text-transform: capitalize;
+}
+
+.nd {
+    position: relative;
+    display: flex;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
