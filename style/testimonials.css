@@ -1,45 +1,77 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-    background-image: url("../images/bg-color.png");
+    height: calc(100vh - 100px);
+    /* Adjust height to account for margin */
+    width: calc(100vw - 100px);
+    /* Adjust width to account for margin */
+    background-image: url("../images/home/body-bg.png");
     background-size: cover;
     background-repeat: no-repeat;
+    margin: 50px;
 }
 
-.home-container {
-    width: 95%;
-    height: 90vh;
+.container {
+    height: 100%;
+    width: 100%;
     background-color: whitesmoke;
-    margin: 3% auto;
-    /* Updated to center horizontally */
-    border-radius: 20px;
-    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.5);
+    display: grid;
+    padding: 3rem;
+    border-radius: 10px;
+
+    row-gap: 1rem;
+    column-gap: 1rem;
+    gap: 1rem;
+    /* grid-template-rows: 1fr 1fr;
+     */
+    /* grid-template-rows: repeat(4,1fr);
+    /* grid-template-columns: 1fr 1fr 1fr; 
+    grid-template-columns: repeat(3,1fr); */
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(6, 1fr);
 }
 
-@media only screen and (max-width: 600px) {
-    .home-container {
-        width: 90%;
-        height: 80vh;
-        margin: 2% auto;
-        /* Updated to center horizontally */
+.item {
+    background-color: rgb(94, 94, 194);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* font-size: 2.3rem; */
+}
+
+
+
+@media (min-width:768px) {
+    .container {
+        grid-template-rows: repeat(8, 1fr);
+        /* grid-template-columns: 1fr 1fr 1fr; */
+        grid-template-columns: repeat(5, 1fr);
+    }
+
+    .header,
+    .footer {
+        grid-column-start: 2;
+        grid-column-end: 6;
+    }
+
+    .sidebar {
+        grid-row-start: 1;
+        grid-row-end: 9;
+        background: rgb(78, 215, 255);
+        background: linear-gradient(90deg, rgba(78, 215, 255, 1) 0%, rgba(196, 251, 255, 1) 44%);
+        border-radius: 10px;
+        box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.5);
+    }
+
+    .content1 {
+        grid-column-start: 2;
+        grid-column-end: 6;
+        grid-row-start: 2;
+        grid-row-end: 8;
     }
 }
-
-nav{
-    width: 15vw;
-    height: 95%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 20px;
-    background-color: rgb(100, 197, 250);
-    color: white;
-    position: relative;
-    top: 2%;
-    bottom: 2%;
-    left: 2%;
-}
-

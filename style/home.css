@@ -3,19 +3,25 @@
     padding:0;
 }
 body{
-    background-image: url("../Images/Home/img.png");
+    background-image: url("../images/home/body-bg.png");
     background-size: cover;
     background-repeat: no-repeat;
     font-family: "Kanit", sans-serif;
+    zoom: 1;
 }
 
 .container{
     width: 94vw;
-    height: 90vh;
+    height: auto;
     margin: 50px;
     border-radius: 20px;
-    background-image: url("../Images/Home/bgimg.png");
+    background-color: white;
     box-shadow: 0 0 10px 5px rgba(0,0,0,0.5);
+    background-image: url("../images/home/bgimg.png");
+    background-position: right;
+    background-size: 40%;
+    background-repeat: no-repeat;
+    position: relative;
 }
 
 .navbar {
@@ -25,7 +31,7 @@ body{
     padding: 10px 20px;
 }
 .navbar .logo img {
-    height: 80px;
+    height: 85px;
 }
 .navbar ul {
     list-style: none;
@@ -52,6 +58,19 @@ body{
     padding-left: 10%;
 }
 
+.content-container {
+    width: 80%; 
+    margin: 0 auto;
+    padding-top: 40px;
+    overflow-y: auto; 
+    height: calc(100vh - 100px); 
+    position: absolute; 
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
 .content{
     color: black;
     width: 80%; 
@@ -61,6 +80,8 @@ body{
     line-height: 1.8; 
     font-size: 20px;
     font-weight: bold;
+    margin-bottom: 50px;
+
 }
 
 button{
@@ -77,4 +98,41 @@ button{
     margin-top: 30px;
     display: inline-block; 
     margin-right: 30px;
+}
+
+.gallery-heading {
+    color: rgba(71, 215, 234, 0.999);
+    font-size: 55px;
+    font-weight: bold;
+    margin-top: 8%;
+    padding-left: 10%
+}
+
+.gallery .container{
+    margin-bottom: -50px;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.gallery img {
+    width: 30%; /* adjust the width as needed */
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+@media only screen and (max-width: 600px) {
+    .container {
+        /* ... existing styles ... */
+        height: 100%; /* adjust the height to fit the screen */
+    }
+
+    .content-container {
+        /* ... existing styles ... */
+        height: 100%; /* adjust the height to fit the screen */
+    }
 }
