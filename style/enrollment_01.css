@@ -25,9 +25,9 @@ h3{
     right: 30px;
     object-fit: fill;
 }
-.Collegeimg{
-    display: flex;
-    gap: 20px;
+*Collegeimg{
+    display: -ms-inline-grid;
+    row-gap:20px;
     border-radius: 10px;
     margin: 10px 10px 10px 300px;
     
