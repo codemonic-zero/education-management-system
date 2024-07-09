@@ -2,9 +2,14 @@ body{
     background-image: url(./../images/blog_images/img.png);
 
 }
-h1,p{
+h1{
     color: whitesmoke;
     text-align: center;
+}
+#line1{
+    color: whitesmoke;
+    text-align: center;
+    font-size: x-large;
 }
 .resourcespg{
     margin: 20px 0px 0px 250px;
