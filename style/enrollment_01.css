@@ -25,7 +25,7 @@ h3{
     right: 30px;
     object-fit: fill;
 }
-*Collegeimg{
+.Collegeimg{
     display: -ms-inline-grid;
     row-gap:20px;
     border-radius: 10px;
@@ -37,7 +37,7 @@ h3{
     
 }
 .formhead{
-    height: 1200px;
+    height: 1550px;
     width: 1000px;
     background-color:whitesmoke;
     border: 5px hidden;
@@ -87,23 +87,22 @@ h4,h5{
     height: 300px;
     width: 900px;
     /* background-color: #DFCD17; */
-    position: absolute;
     /* background-color: #DFCD17; */
-    margin: 800px 0px 0px 20px;  
+    margin: 550px 100px 0px 20px;   
     padding: 10px 50px 20px 20px;
     border-radius: 5px;
-    bottom: 200px;
-    top: -100px;
+    /* left: 15px;
+    top: 500px; */
 }
 .Academic{
     height: 300px;
     width: 900px;
     /* background-color: #DFCD17; */
-    position: absolute;
-    margin: 15px 0px 0px 20px;   
+    padding: 20px 50px 30px 20px;
+    margin: 150px 100px 0px 20px;   
     border-radius: 5px;
-    bottom: 400px;
-    top: 1000px;
+    /* bottom: 400px;
+    top: 1000px; */
 }
 .form-control {
     display: block;
@@ -204,4 +203,33 @@ h4,h5{
   .col-12 {
     flex: 0 0 auto;
     width: 100%;
+  }
+  .btn-primary{
+    height: 30px;
+    width:  max-content;
+    background-color:rgb(36, 36, 179);
+    color: whitesmoke;
+    right: 200px;
+    position: relative;
+    left: 400px;
+    top: 50px;
+    border-radius: 20px;
+  }
+  .btn-primary::after{
+    background-color: whitesmoke;
+  }
+  .thankyou{
+    background-color:rgb(36, 36, 179);
+    color: whitesmoke;
+    right: 1px;
+    position: relative;
+    left: 20px;
+    top: 135px;
+    height: 30px;
+    width: 900px;
+    border-radius: 5px;
+    text-align: center;
+    font-size: larger;
+
+
   }
