@@ -1,0 +1,82 @@
+body{
+    background-image: url(./../images/img.png);
+
+}
+.Enrollment{
+    background-color: rgb(226, 209, 201);
+    text-align: center;
+    margin: 2px 500px 0px 250px;
+    width: 1000px;
+    height: 50px;
+    border-style: hidden;
+    border-radius: 105px;
+}
+.Enrollmentformhead{
+    text-align: center;
+    color: whitesmoke;
+}
+h3{
+    text-align: center;
+}
+.logo{
+    margin: 15px 1300px 0px 20px;
+    position: relative;
+    bottom: 200px;
+    right: 30px;
+    object-fit: fill;
+}
+*Collegeimg{
+    display: -ms-inline-grid;
+    row-gap:20px;
+    border-radius: 10px;
+    margin: 10px 10px 10px 300px;
+    
+}
+.Collegeimg:hover{
+    transition: cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    
+}
+.Studentdetails{
+    height: 700px;
+    width: 1000px;
+    background-color: aliceblue;
+    border: 5px hidden;
+    border-radius: 10px;
+    text-align: left;
+    margin: 100px 0px 0px 300px; 
+    position: relative;
+    
+}
+h3{
+    font-family: "Roboto Slab", serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    
+}
+.stdDetails{
+    height: 300px;
+    width: 400px;
+    background-color: #DFCD17;
+    position: absolute;
+    margin: 15px 0px 0px 20px; 
+    padding: 10px 50px 20px 20px;
+    border-radius: 5px;
+}
+.Academic{
+    height: 300px;
+    width: 400px;
+    background-color: #DFCD17;
+    position: absolute;
+    margin: 350px 0px 00px 20px; 
+    border-radius: 5px;
+}
+.parentdetails{
+    height: 300px;
+    width: 400px;
+    background-color: #DFCD17;
+    position: absolute;
+    margin: 105px 100px 100px 200px; 
+    padding: 10px 50px 20px 20px;
+    border-radius: 5px;
+}
