@@ -64,7 +64,8 @@
             display: grid;
             grid-template-rows: auto 1fr auto;
             grid-template-columns: 1fr;
-            overflow: hidden; /* Prevent content from spilling out */
+            overflow: hidden;
+            /* Prevent content from spilling out */
         }
 
         .logo {
@@ -82,18 +83,21 @@
             row-gap: 2rem;
         }
 
-        li{
+        li {
             height: 8vh;
-            width: 40vh; /* Full width of the sidebar */
-            max-width: 40vh; /* Maximum width */
+            width: 40vh;
+            /* Full width of the sidebar */
+            max-width: 40vh;
+            /* Maximum width */
             display: flex;
             justify-content: center;
             align-items: center;
             font-size: calc(0.8rem + 0.8vw);
             font-weight: bold;
-            margin: 0 auto; /* Center the li if smaller than max-width */
-        
+            margin: 0 auto;
+            /* Center the li if smaller than max-width */
         }
+
         li {
             font-size: calc(1rem + 1vw);
             /* Other existing styles */
@@ -101,12 +105,13 @@
 
         a {
             font-size: calc(0.7rem + 0.7vw);
-            white-space: nowrap; /* Prevent text wrapping */
+            white-space: nowrap;
+            /* Prevent text wrapping */
             overflow: hidden;
-            text-overflow: ellipsis; 
+            text-overflow: ellipsis;
         }
 
-        li:hover{
+        li:hover {
             font-size: 30px;
             font-weight: bold;
             background-color: rgb(32, 9, 148);
@@ -123,11 +128,16 @@
             color: transparent;
         }
 
-        a{
+        a {
             text-decoration: none;
             /* color: blue; */
         }
 
+        h1 {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+        }
 
         @media (min-width:768px) {
             .sidebar {
@@ -155,7 +165,12 @@
 
             }
 
-            .list1, .list2, .list3, .list4, .list5, .list6{
+            .list1,
+            .list2,
+            .list3,
+            .list4,
+            .list5,
+            .list6 {
                 grid-column-start: 1;
                 /* Align with sidebar column */
                 grid-column-end: 2;
@@ -196,16 +211,25 @@
                 /* Start at the top of the sidebar */
                 grid-row-end: 8;
             }
+
             .container {
                 grid-template-rows: repeat(8, 1fr);
                 /* grid-template-columns: 1fr 1fr 1fr; */
                 grid-template-columns: repeat(5, 1fr);
+
             }
 
             .header,
             .footer {
                 grid-column-start: 2;
                 grid-column-end: 6;
+                display: inline-flex;
+                justify-content: center;
+                align-items: center;
+                background: rgb(78, 215, 255);
+                background: linear-gradient(90deg, rgba(78, 215, 255, 1) 0%, rgba(196, 251, 255, 1) 44%);
+                border-radius: 10px;
+                box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.5);
             }
 
             .sidebar {
@@ -225,6 +249,10 @@
                 grid-column-end: 5;
                 grid-row-start: 2;
                 grid-row-end: 8;
+                background: rgb(78, 215, 255);
+                background: linear-gradient(90deg, rgba(78, 215, 255, 1) 0%, rgba(196, 251, 255, 1) 44%);
+                border-radius: 10px;
+                box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.5);
             }
 
             li {
@@ -241,23 +269,26 @@
 <body>
     <div class="container">
         <div class="item header">
+            <h1 style="color: rgb(32, 9, 148) ;">Skymentor College Of Technology & Services</h1>
         </div>
         <div class="item sidebar">
             <img src="../images/home/logo.png" alt="" class="logo">
             <ul>
-                        <li class="list1"><a href="">Home</a></li>
-                        <li class="list2"><a href="">About</a></li>
-                        <li class="list3"><a href="">Services</a></li>
-                        <li class="list4"><a href="">Home</a></li>
-                        <li class="list5"><a href="">About</a></li>
-                        <li class="list6"><a href="">Services</a></li>
+                <li class="list1"><a href="">Home</a></li>
+                <li class="list2"><a href="">About</a></li>
+                <li class="list3"><a href="">Services</a></li>
+                <li class="list4"><a href="">Home</a></li>
+                <li class="list5"><a href="">About</a></li>
+                <li class="list6"><a href="">Services</a></li>
                 <!-- <li></li>
                 <li></li>
                 <li></li> -->
             </ul>
         </div>
         <div class="item content1">Content1</div>
-        <div class="item footer">Footer</div>
+        <div class="item footer">
+            <h2 style="color: brown;">&copy; All Copyrights Received 2022. Skymentor College of Technology & Services</h2>
+        </div>
     </div>
 </body>
 
