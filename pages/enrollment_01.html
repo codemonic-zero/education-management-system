@@ -26,23 +26,55 @@
     </div>
 
     <div class="logo">
-        <img src="./../images/LOGO.png" alt="logo" height="250px" width="300px">
+        <img src="./../images/blog_images/LOGO.png" alt="logo" height="250px" width="300px">
     </div>
 
     <div *="Collegeimg">
 
-        <img src="./../images/clg campous.png" alt="College campous" height="200px" width="350px" loading="lazy">
-        <img src="./../images/clg-building.png" alt="College building" height="200px" width="350px" loading="lazy">
-        <img src="./../images/clg-group.jpg" alt="College group" height="200px" width="350px" loading="lazy">
+        <img src="./../images/blog_images/clg campous.png" alt="College campous" height="200px" width="350px" loading="lazy">
+        <img src="./../images/blog_images/clg-building.png" alt="College building" height="200px" width="350px" loading="lazy">
+        <img src="./../images/blog_images/clg-group.jpg" alt="College group" height="200px" width="350px" loading="lazy">
     
     </div>
-    <div class="Studentdetails">
-    <h3>Student Details </h3>
+    <div class="formhead">
+    <h3>Skymentor College of Technology And Services <br>Student Enrollment Form </h3>
+    <div class="stdDetails">
+    <p class="line1">Student Details </p>
+    <form>
+        <div class="d-flex row">
+        <div class="mb-3 col-5">
+            <label for="First Name"><b>First Name :- </b></label>
+          <input type="text" class="form-control" placeholder="Enter First Name" aria-describedby="emailHelp">
+        </div>
+        <div class="col-2"></div>
+        <div class="mb-3 col-5">
+            <label for="Last Name"><b>Last Name :- </b></label>
+          <input type="text" class="form-control" placeholder="Enter Last Name">
+        </div>
+        </div>
+        <div class="d-flex row">
+            <div class="mb-3 col-5">
+                <label for="Father Name"><b>Father Name :- </b></label>
+                <input type="text" class="form-control" placeholder="Enter Father Name" aria-describedby="emailHelp">
+            </div>
+            <div class="col-2"></div>
+            <div class="mb-3 col-5">
+                <label for="Mother Name"><b>Mother Name :- </b></label>
+                <input type="text" class="form-control" placeholder="Enter Mother Name">
+            </div>
+        
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+      </div>
+<!--       
     <form action="">
     <div class="stdDetails">
-        <label for="First Name">First Name :- </label>
-        <input type="text">
-        <br>
+        <p class="line1">Student Details </p>
+        !-- <label for="First Name">First Name :- </label> --
+         <div class="">
+        <input type="text" placeholder="First Name">
+        <input type="text"  placeholder="Last Name">
+    </div>
         <label for="Father Name">Father Name :- </label>
         <input type="text">
         <br>
@@ -67,31 +99,24 @@
         <label for="Student Address">Student Address :- </label>
         <input type="text">
         <br>
-        <label for="">Gender</label>
-        
+        <label for="Gender">Gender :- </label>
+        <input type="radio" name="male" value="male">
+        <label for="male">Male</label>
+        <input type="radio" name="female" value="female">
+        <label for="female">Female</label>
+        <br>
         <label for="city">City </label>
         <input type="text">
+        <br>
         <label for="state">State </label>
         <input type="text">
+        <br>
         <label for="zipcode">Zip code </label>
         <input type="text">
     </div>
 
-    <div class="Academic">
-        <h4>Academic Information :- </h4>
-        <label for="Previous School">Previous School :-</label>
-        <input type="text">
-        <br>
-        <label for="PreviousColege">Previous Cologe :-</label>
-        <input type="text">
-        <br>
-        <label for="Passingyear">Passing Year :-</label>
-        <input type="number">
-        <br>
-    </div>
-
     <div class="parentdetails">
-        <h5>Parent's Details</h5>
+        <h4>Parent's Details</h4>
         <label for="First Name">First Name :- </label>
         <input type="text">
         <br>
@@ -105,7 +130,7 @@
         <input type="number">
         <br>
         <label for="Education">Education</label>
-        <input type="text">
+        <input type="text"><br>
         <label for="Contactnumber">Contact Number</label>
         <input type="text">
         <br>
@@ -114,7 +139,24 @@
         <br>
         
     </div>
-    </form>
+
+    <div class="Academic">
+        <h5>Academic Information :- </h5>
+        <label for="Previous School">Previous School :-</label>
+        <input type="text">
+        <br>
+        <label for="PreviousColege">Previous Cologe :-</label>
+        <input type="text">
+        <br>
+        <label for="Passingyear">Passing Year :-</label>
+        <input type="number">
+        <br>
+        <input type="radio" name="any one" value="A">
+        <label for="rakesh"><b>A</b></label><br>
+    </div>
+
+    
+    </form> -->
 
       </div>
 </body>
