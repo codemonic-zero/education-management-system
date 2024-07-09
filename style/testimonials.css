@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
 }
 
 body {
@@ -20,7 +21,10 @@ body {
     width: 100vw;
     /* background-image: url("../images/home/body-bg.png"); */
     display: grid;
-        /* grid-template-rows: 1fr 1fr;*/
+    /* display: flex; */
+        flex-direction: column;
+        /* min-height: 100vh; */
+    /* grid-template-rows: 1fr 1fr;*/
     /* grid-template-rows: repeat(4,1fr);*/
     /* grid-template-columns: 1fr 1fr 1fr; 
     grid-template-columns: repeat(3,1fr); */
@@ -37,10 +41,17 @@ body {
     opacity: 1;
     /* font-size: 2.3rem; */
 }
-
+.item.content1 {
+    flex: 1;
+    overflow-y: auto;
+    padding-bottom: 1rem; /* Adjust as needed */
+}
 .logo {
-    width: 10vw;
-    height: 15vh;
+
+    width: 100%;
+    height: 10vh;
+    object-fit: contain;
+    box-sizing: border-box;
     /* overflow: hidden; Prevent content from spilling out */
 }
 
@@ -52,19 +63,13 @@ body {
     /* Prevent content from spilling out */
 }
 
-.logo {
-    width: 100%;
-    height: 10vh;
-    object-fit: contain;
-    box-sizing: border-box;
-}
 
 ul {
     display: grid;
     grid-template-rows: repeat(3, auto);
     justify-content: center;
     align-content: center;
-    
+
 }
 
 li {
@@ -90,6 +95,7 @@ a {
     /* Prevent text wrapping */
     overflow: hidden;
     text-overflow: ellipsis;
+    text-decoration: none;
 }
 
 li:hover {
@@ -109,16 +115,157 @@ li:hover a {
     color: transparent;
 }
 
-a {
-    text-decoration: none;
-    /* color: blue; */
-}
 
 h1 {
     display: inline-flex;
     justify-content: center;
     align-items: center;
 }
+
+.testimonial-1 {
+    display: flex;
+    /* margin: 3rem; */
+    /* padding: 2rem; */
+}
+
+.desp {
+    height: 25vh;
+    width: 40vw;
+    background-image: url("../images/home/body-bg.png");
+    /* margin-top: 3rem; */
+    padding:2rem;
+    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.5);
+    border-radius: 60px 60px 10px 60px;
+    display: inline-flex;
+    font-size: large;
+    font-family: monospace;
+    font-weight: 900;
+    font-style: italic;
+    text-align: justify;
+}
+
+
+.team-container1 {
+    width: 15vh;
+    height: 15vh;
+    border-radius: 50% 10px 50% 50% ;
+    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.5);
+}
+
+.t-card{
+    margin: 0 10rem 0 10rem;
+    padding: 1.8rem;
+    border-radius: 1rem;
+    width: 28vw;
+}
+
+.testimonial {
+	width: 50vw;
+	max-width: 100%;
+	/* background: #ffca52; */
+	background-image: url("../images/home/body-bg.png");
+    /* margin: 4rem; */
+	padding: 4em 3em;
+	display: flex;
+	align-items: flex-end;
+	position: relative;
+	box-shadow: 0 2px 2px hsl(0deg 0% 0%/.075), 0 3px 3px hsl(0deg 0% 0%/.075), 0 5px 5px hsl(0deg 0% 0%/.075), 0 9px 9px hsl(0deg 0% 0%/.075), 0 17px 17px hsl(0deg 0% 0%/.075);
+	position: relative;
+	
+	
+	.quote {
+		position: absolute;
+		font-size: 3em;
+		width: 40px;
+		height: 40px;
+		background: navy;
+		color: #fff;
+		text-align: center;
+		line-height: 1.25;
+		&.open {
+			top: 0;
+			left: 0;
+		}
+		&.close {
+			bottom: 0;
+			right: 0;
+		}
+	}
+	p {
+		width: 60%;
+		display: inline-block;
+		font-weight: bold;
+		font-size: 1.25em;
+	}
+	.source {
+		width: 40%;
+		height: 100%;
+		position: relative;		
+		span {			
+			display: inline-block;
+			font-weight: bold;
+			font-size: 1.15em;
+			position: relative;
+			margin-left: 1rem;
+			text-align: right;			
+			&:before {
+				content: "\2014";
+				display: inline;
+				margin-right: 5px;
+			}
+		}		
+	}
+	.image {
+		transform: rotate(-5deg);
+		position: absolute;
+        /* margin-top: 1rem; */
+		top: 0.5em;
+		right: 1.5em;
+		img {
+			border: 10px solid #fff;
+			margin: 0;
+			padding: 0;
+		}
+		.clip {
+			border: 2px solid #222;
+			border-right: none;
+			height: 75px;
+			width: 20px;
+			position: absolute;
+			right: 5%;
+			top: -15%;
+			border-radius: 25px;
+			&:before {
+				content: "";
+				position: absolute;
+				top: -1px;
+				right: 0;
+				height: 10px;
+				width: 16px;
+				border: 2px solid #222;
+				border-bottom: none;
+				border-top-left-radius: 25px;
+				border-top-right-radius: 25px;
+				z-index: 99;					
+			}
+			&:after {
+				content: "";
+				position: absolute;
+				bottom: -1px;
+				right: 0;
+				height: 40px;
+				width: 16px;
+				border: 2px solid #222;
+				border-top: none;
+				border-bottom-left-radius: 25px;
+				border-bottom-right-radius: 25px;
+				z-index: 99;
+			}
+		}
+	}
+}
+
+
 
 @media (min-width:768px) {
     .sidebar {
@@ -131,7 +278,7 @@ h1 {
         /* Adjusted to span 9 rows */
         background: rgb(78, 215, 255);
         background: linear-gradient(90deg, rgba(78, 215, 255, 1) 0%, rgba(196, 251, 255, 1) 44%);
-        border: 1px solid  rgb(32, 9, 148);
+        border: 1px solid rgb(32, 9, 148);
         box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.5);
     }
 
@@ -146,15 +293,7 @@ h1 {
 
     }
 
-    .list1,
-    .list2,
-    .list3,
-    .list4,
-    .list5,
-    .list6,
-    .list7,
-    .list8,
-    .list9 {
+    .list1, .list2, .list3, .list4, .list5, .list6, .list7, .list8, .list9 {
         grid-column-start: 1;
         /* Align with sidebar column */
         grid-column-end: 2;
@@ -195,16 +334,19 @@ h1 {
         /* Start at the top of the sidebar */
         grid-row-end: 8;
     }
+
     .list7 {
         grid-row-start: 8;
         /* Start at the top of the sidebar */
         grid-row-end: 9;
     }
+
     .list8 {
         grid-row-start: 9;
         /* Start at the top of the sidebar */
         grid-row-end: 10;
     }
+
     .list9 {
         grid-row-start: 10;
         /* Start at the top of the sidebar */
@@ -227,11 +369,11 @@ h1 {
         align-items: center;
         background: rgb(78, 215, 255);
         background: linear-gradient(90deg, rgba(78, 215, 255, 1) 0%, rgba(196, 251, 255, 1) 44%);
-        border: 1px solid  rgb(32, 9, 148);
+        border: 1px solid rgb(32, 9, 148);
         box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.5);
     }
 
-    
+
 
     .content1 {
         grid-column-start: 2;
@@ -240,7 +382,7 @@ h1 {
         grid-row-end: 8;
         background: rgb(78, 215, 255);
         background: linear-gradient(90deg, rgba(78, 215, 255, 1) 0%, rgba(196, 251, 255, 1) 44%);
-        border: 1px solid  rgb(32, 9, 148);
+        border: 1px solid rgb(32, 9, 148);
         box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.5);
     }
 
