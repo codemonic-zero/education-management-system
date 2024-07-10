@@ -59,7 +59,9 @@ body {
     object-fit: contain;
     box-sizing: border-box;
 }
-
+.card{
+    display: flex;
+}
 ul {
     display: grid;
     grid-template-rows: repeat(3, auto);
@@ -247,7 +249,8 @@ h1 {
         font-size: calc(0.7rem + 0.7vw);
     }
 }
-/*.content {
+
+.content1 {
     grid-column-start: 2;
     grid-column-end: 6;
     grid-row-start: 2;
@@ -255,130 +258,61 @@ h1 {
     background: rgb(78, 215, 255);
     background: linear-gradient(90deg, rgba(78, 215, 255, 1) 0%, rgba(196, 251, 255, 1) 44%);
     border: 1px solid  rgb(32, 9, 148);
-    overflow-y: auto; /* Add scrollbar for vertical overflow 
+    overflow-y: auto; /* Add scrollbar for vertical overflow */
 }
 
-.about-us-section {
-    text-align: center;
-    margin-bottom: 40px;
+.item content1{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    padding: 20px;
+    grid-template-columns: repeat(3, 3fr);
+    grid-template-rows: repeat(1, 2fr);
 }
 
-.about-us-section p {
-    font-size: 18px;
-}
-
-.team-container {
+.history {
     display: flex;
     flex-direction: column;
-    align-items: center;
-}
-
-.team-row {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 40px;
-}
-
-.team-row.single-member {
-    justify-content: center;
-}
-.team-member {
-    text-align: center;
-    margin: 0 20px;
-}
-
-.team-member img {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    margin-bottom: 10px;
-}
-
-.team-member h2 {
-    font-size: 24px;
-    margin-bottom: 5px;
-}
-
-.team-member p {
-    font-size: 18px;
-    color: gray;
-}*/
-
-.carousel {
-    grid-column-start: 2;
-    grid-column-end: 6;
-    grid-row-start: 2;
-    grid-row-end: 8;
-    background: rgb(78, 215, 255);
-    background: linear-gradient(90deg, rgba(78, 215, 255, 1) 0%, rgba(196, 251, 255, 1) 44%);
-    border: 1px solid  rgb(32, 9, 148);
-    position: relative;
+    width: 30%;
+    margin: 35px;
+    background-color: whitesmoke;
+    border-radius: 0px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     overflow: hidden;
+    border-radius: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.history:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.history img {
     width: 100%;
-    max-width: 600px; /* Adjust max-width as needed */
-    margin: 0 auto;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 2px solid #c2cdf67a;
 }
 
-.carousel-inner {
-    display: flex;
-    width: 300%;
-    transition: transform 0.5s ease;
+.history-info {
+    padding: 15px;
+    text-align: justify;
 }
 
-.carousel-item {
-    flex: 1;
-    width: 100%;
-    position: relative;
-}
-
-.carousel-item img {
-    width: 100%;
-    display: block;
-}
-
-.description {
-    position: absolute;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    background: rgba(0, 0, 0, 0.5);
-    color: #fff;
-    padding: 10px;
-    border-radius: 5px;
+.history-info h3 {
+    font-size: 18px;
+    font-weight: bold;
+    /*color: #333;*/
+    color: black;
+    margin-bottom: 5px;
     text-align: center;
 }
 
-.two-images {
-    display: flex;
-}
-
-.two-images img {
-    width: 50%;
-}
-
-/* Media Query for smaller screens */
-@media (max-width: 600px) {
-    .carousel-inner {
-        width: 300%;
-    }
-
-    .carousel-item {
-        width: 100%;
-    }
-
-    .two-images img {
-        width: 100%;
-    }
-}
-
-/* Keyframes for the carousel sliding effect */
-@keyframes slide {
-    0%, 33.33% { transform: translateX(0); }
-    33.33%, 66.66% { transform: translateX(-100%); }
-    66.66%, 100% { transform: translateX(-200%); }
-}
-
-/* Apply animation */
-.carousel-inner {
-    animation: slide 10s infinite;
+.history-info p {
+    font-size: 14px;
+    /*color: #555;*/
+    color: black;
+    margin-bottom: 10px;
 }
