@@ -145,7 +145,6 @@ h1 {
         background: rgb(78, 215, 255);
         background: linear-gradient(90deg, rgba(78, 215, 255, 1) 0%, rgba(196, 251, 255, 1) 44%);
         border: 1px solid  rgb(32, 9, 148);
-        box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.5);
     }
 
     .logo {
@@ -228,13 +227,10 @@ h1 {
         grid-template-rows: repeat(8, 1fr);
         /* grid-template-columns: 1fr 1fr 1fr; */
         grid-template-columns: repeat(5, 1fr);
-        
-
     }
 
     .header,
     .footer {
-
         grid-column-start: 2;
         grid-column-end: 6;
         display: inline-flex;
@@ -243,8 +239,6 @@ h1 {
         background: rgb(78, 215, 255);
         background: linear-gradient(90deg, rgba(78, 215, 255, 1) 0%, rgba(196, 251, 255, 1) 44%);
         border: 1px solid  rgb(32, 9, 148);
-        box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.5);
-        /* position: ; */
     }
 
     li {
@@ -264,7 +258,6 @@ h1 {
     background: rgb(78, 215, 255);
     background: linear-gradient(90deg, rgba(78, 215, 255, 1) 0%, rgba(196, 251, 255, 1) 44%);
     border: 1px solid  rgb(32, 9, 148);
-    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.5);
     overflow-y: auto; /* Add scrollbar for vertical overflow */
 }
 
