@@ -84,7 +84,9 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
 }
-
+.main container01{
+    transition-timing-function: ease-in 3s;
+}
 .container {
     height: 100vh;
     width: 100vw;
@@ -96,7 +98,6 @@ body {
     grid-template-columns: repeat(3,1fr); */
     grid-template-columns: repeat(1, 1fr);
     grid-template-rows: repeat(6, 1fr);
-    overflow-y: auto; /* Add scrollbar for vertical overflow */
 }
 
 .heading{
@@ -181,6 +182,7 @@ li:hover {
     background-color: linear-gradient(90deg, rgba(32, 9, 148, 1) 0%, rgba(53, 51, 205, 1) 44%);
     color: aliceblue;
     border-radius: 20px;
+    
 }
 
 li:hover a {
@@ -189,6 +191,7 @@ li:hover a {
     -webkit-text-fill-color: transparent;
     background-clip: text;
     color: transparent;
+    
 }
 
 a {
@@ -208,23 +211,20 @@ h1 {
     width: 80vw;
 } */
 
+
 @media (min-width:768px) {
-    .container{
-        grid-template-columns: repeat(5, 1fr);
-        
-    }
     .sidebar {
         display: grid;
         /* Enable grid layout inside sidebar */
         grid-template-rows: repeat(11, 1fr);
         /* Define 8 rows inside sidebar */
         grid-row-start: 1;
-        grid-row-end: 13;
+        grid-row-end: 14;
         /* Adjusted to span 9 rows */
         background: rgb(78, 215, 255);
         background: linear-gradient(90deg, rgba(78, 215, 255, 1) 0%, rgba(196, 251, 255, 1) 44%);
-        border: 1px solid  rgb(32, 9, 148);
-        box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.5);
+        border: 1px solid rgb(32, 9, 148);
+        /* box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.5); */
     }
 
     .logo {
@@ -313,7 +313,6 @@ h1 {
 
     .header,
     .footer {
-
         grid-column-start: 2;
         grid-column-end: 6;
         display: inline-flex;
@@ -321,9 +320,8 @@ h1 {
         align-items: center;
         background: rgb(78, 215, 255);
         background: linear-gradient(90deg, rgba(78, 215, 255, 1) 0%, rgba(196, 251, 255, 1) 44%);
-        border: 1px solid  rgb(32, 9, 148);
-        box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.5);
-        /* position: ; */
+        border: 1px solid rgb(32, 9, 148);
+        /* box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.5); */
     }
 
     li {
@@ -343,7 +341,6 @@ h1 {
     background: rgb(78, 215, 255);
     background: linear-gradient(90deg, rgba(78, 215, 255, 1) 0%, rgba(196, 251, 255, 1) 44%);
     border: 1px solid  rgb(32, 9, 148);
-    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.5);
     overflow-y: auto; /* Add scrollbar for vertical overflow */
 }
 
@@ -367,11 +364,13 @@ h1 {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     transition: transform 0.3s, box-shadow 0.3s;
+
 }
 
 .history:hover {
     transform: scale(1.05);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    
 }
 
 .history img {
