@@ -13,6 +13,7 @@ body {
     background-color: whitesmoke;
     background-size: cover;
     background-repeat: no-repeat;
+    overflow: hidden;
 }
 
 .container {
@@ -26,7 +27,7 @@ body {
     grid-template-columns: repeat(3,1fr); */
     grid-template-columns: repeat(1, 1fr);
     grid-template-rows: repeat(6, 1fr);
-    overflow-y: auto; /* Add scrollbar for vertical overflow */
+    overflow: hidden;
 }
 
 .item {
@@ -49,6 +50,7 @@ body {
     display: grid;
     grid-template-rows: auto 1fr auto;
     grid-template-columns: 1fr;
+    overflow-y: auto;
     /* overflow: hidden; */
     /* Prevent content from spilling out */
 }
