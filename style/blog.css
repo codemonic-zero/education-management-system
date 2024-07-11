@@ -90,13 +90,15 @@ body {
     width: 100vw;
     /* background-image: url("../images/home/body-bg.png"); */
     display: grid;
-        /* grid-template-rows: 1fr 1fr;*/
+    /* display: flex; */
+        flex-direction: column;
+        /* min-height: 100vh; */
+    /* grid-template-rows: 1fr 1fr;*/
     /* grid-template-rows: repeat(4,1fr);*/
     /* grid-template-columns: 1fr 1fr 1fr; 
     grid-template-columns: repeat(3,1fr); */
     grid-template-columns: repeat(1, 1fr);
     grid-template-rows: repeat(6, 1fr);
-    overflow-y: auto; /* Add scrollbar for vertical overflow */
 }
 
 .heading{
@@ -128,8 +130,7 @@ body {
     display: grid;
     grid-template-rows: auto 1fr auto;
     grid-template-columns: 1fr;
-    /* overflow: hidden; */
-    /* Prevent content from spilling out */
+    overflow-y: auto; /* Add vertical scrollbar */
 }
 
 .logo {
@@ -223,7 +224,6 @@ h1 {
         border: 1px solid rgb(32, 9, 148);
         /* box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.5); */
     }
-
     .logo {
         grid-column-start: 1;
         /* Align with sidebar column */
@@ -338,7 +338,7 @@ h1 {
     background: rgb(78, 215, 255);
     background: linear-gradient(90deg, rgba(78, 215, 255, 1) 0%, rgba(196, 251, 255, 1) 44%);
     border: 1px solid  rgb(32, 9, 148);
-    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.5);
+    /* box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.5); */
     overflow-y: auto; /* Add scrollbar for vertical overflow */
 }
 
