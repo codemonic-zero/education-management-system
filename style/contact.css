@@ -14,8 +14,10 @@ body {
     /* Adjust width to account for margin */
     background-color: whitesmoke;
     background-size: cover;
-    background-repeat: no-repeat;    font-family: "Inter", sans-serif;
+    background-repeat: no-repeat;
+    font-family: "Inter", sans-serif;
 }
+
 
 .container {
     height: 100vh;
@@ -55,8 +57,22 @@ body {
     grid-template-rows: auto 1fr auto;
     grid-template-columns: 1fr;
     overflow-y: auto;
+    
     /* Add vertical scrollbar */
 }
+.sidebar,
+.content1 {
+    overflow-y: auto;
+    /* Enable vertical scrollbar */
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
+}
+
+.sidebar::-webkit-scrollbar,
+.content1::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+}
+
 
 ul {
     display: grid;
@@ -250,8 +266,8 @@ li:hover a {
     }
 
     .content1 {
-        grid-column-start: 3;
-        grid-column-end: 5;
+        grid-column-start: 2;
+        grid-column-end: 6;
         grid-row-start: 2;
         grid-row-end: 10;
         background: rgb(78, 215, 255);
@@ -269,6 +285,7 @@ li:hover a {
 }
 
 
+/* Contact */
 .formbold-main-wrapper {
     display: flex;
     align-items: center;

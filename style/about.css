@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -11,6 +13,7 @@ body {
     background-color: whitesmoke;
     background-size: cover;
     background-repeat: no-repeat;
+    font-family: "Inter", sans-serif;
 }
 
 .container {
@@ -20,6 +23,21 @@ body {
     flex-direction: column;
     grid-template-columns: repeat(1, 1fr);
     grid-template-rows: repeat(6, 1fr);
+}
+
+.item {
+    background-color: rgb(94, 94, 194);
+    color: white;
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+}
+
+.item .content1 {
+    flex: 1;
+    overflow-y: auto;
+    padding-bottom: 1rem;
 }
 
 .logo {
@@ -33,7 +51,9 @@ body {
     display: grid;
     grid-template-rows: auto 1fr auto;
     grid-template-columns: 1fr;
-    overflow-y: auto; /* Add vertical scrollbar */
+    overflow-y: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
 }
 
 ul {
@@ -75,26 +95,152 @@ li:hover {
     box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.5);
 }
 
-.list9:hover{
+.list9:hover {
     background-color: linear-gradient(90deg, rgba(32, 9, 148, 1) 0%, rgb(102, 100, 237) 44%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
     color: transparent;
 }
-.btn:hover{
+
+.btn:hover {
     background-color: linear-gradient(90deg, rgba(32, 9, 148, 1) 0%, rgb(102, 100, 237) 44%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
     color: transparent;
 }
+
 li:hover a {
     background: linear-gradient(90deg, rgba(78, 215, 255, 1) 0%, rgba(196, 251, 255, 1) 44%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
     color: transparent;
+}
+
+@media (min-width:768px) {
+    .sidebar {
+        display: grid;
+        grid-template-rows: repeat(11, 1fr);
+        grid-row-start: 1;
+        grid-row-end: 14;
+        background: rgb(78, 215, 255);
+        background: linear-gradient(90deg, rgba(78, 215, 255, 1) 0%, rgba(196, 251, 255, 1) 44%);
+        border: 1px solid rgb(32, 9, 148);
+    }
+
+    .logo {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 1;
+        grid-row-end: 2;
+        height: 8vh;
+    }
+
+    .list1,
+    .list2,
+    .list3,
+    .list4,
+    .list5,
+    .list6,
+    .list7,
+    .list8,
+    .list9,
+    .list10 {
+        grid-column-start: 1;
+        grid-column-end: 2;
+    }
+
+    .btn {
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
+
+    .list1 {
+        grid-row-start: 3;
+        grid-row-end: 4;
+    }
+
+    .list2 {
+        grid-row-start: 4;
+        grid-row-end: 5;
+    }
+
+    .list3 {
+        grid-row-start: 5;
+        grid-row-end: 6;
+    }
+
+    .list4 {
+        grid-row-start: 6;
+        grid-row-end: 7;
+    }
+
+    .list5 {
+        grid-row-start: 7;
+        grid-row-end: 8;
+    }
+
+    .list6 {
+        grid-row-start: 8;
+        grid-row-end: 9;
+    }
+
+    .list7 {
+        grid-row-start: 9;
+        grid-row-end: 10;
+    }
+
+    .list8 {
+        grid-row-start: 10;
+        grid-row-end: 11;
+    }
+
+    .list10 {
+        grid-row-start: 11;
+        grid-row-end: 12;
+    }
+
+    .list9 {
+        grid-row-start: 12;
+        grid-row-end: 13;
+    }
+
+    .container {
+        grid-template-rows: repeat(10, 1fr);
+        grid-template-columns: repeat(5, 1fr);
+    }
+
+    .header,
+    .footer {
+        grid-column-start: 2;
+        grid-column-end: 6;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        background: rgb(78, 215, 255);
+        background: linear-gradient(90deg, rgba(78, 215, 255, 1) 0%, rgba(196, 251, 255, 1) 44%);
+        border: 1px solid rgb(32, 9, 148);
+    }
+
+    .content {
+        grid-column-start: 2;
+        grid-column-end: 6;
+        grid-row-start: 2;
+        grid-row-end: 10;
+        background: rgb(78, 215, 255);
+        background: linear-gradient(90deg, rgba(78, 215, 255, 1) 0%, rgba(196, 251, 255, 1) 44%);
+        border: 1px solid rgb(32, 9, 148);
+    }
+
+    li {
+        font-size: calc(0.8rem + 0.8vw);
+    }
+
+    a {
+        font-size: calc(0.7rem + 0.7vw);
+    }
 }
 
 .content {
@@ -109,7 +255,6 @@ li:hover a {
     max-width: 600px;
     overflow: hidden;
     position: relative;
-
 }
 
 .carousel-inner {
@@ -136,8 +281,8 @@ li:hover a {
     margin-top: 10px;
 }
 
-.description h3{
-    color:rgb(32, 9, 148) ;
+.description h3 {
+    color: rgb(32, 9, 148);
 }
 
 .description p {
@@ -156,145 +301,5 @@ li:hover a {
     }
     66.66%, 100% {
         transform: translateX(-200%);
-    }
-}
-
-
-@media (min-width:768px) {
-    .sidebar {
-        display: grid;
-        /* Enable grid layout inside sidebar */
-        grid-template-rows: repeat(11, 1fr);
-        /* Define 8 rows inside sidebar */
-        grid-row-start: 1;
-        grid-row-end: 14;
-        /* Adjusted to span 9 rows */
-        background: rgb(78, 215, 255);
-        background: linear-gradient(90deg, rgba(78, 215, 255, 1) 0%, rgba(196, 251, 255, 1) 44%);
-        border: 1px solid rgb(32, 9, 148);
-        /* box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.5); */
-    }
-
-    .logo {
-        grid-column-start: 1;
-        /* Align with sidebar column */
-        grid-column-end: 2;
-        grid-row-start: 1;
-        /* Start at the top of the sidebar */
-        grid-row-end: 2;
-        height: 8vh;
-
-    }
-
-    .list1, .list2, .list3, .list4, .list5, .list6, .list7, .list8, .list9, .list10 {
-        grid-column-start: 1;
-        /* Align with sidebar column */
-        grid-column-end: 2;
-    }
-
-
-    .btn {
-        grid-row-start: 2;
-        /* Start at the top of the sidebar */
-        grid-row-end: 3;
-    }
-
-    .list1 {
-        grid-row-start: 3;
-        /* Start at the top of the sidebar */
-        grid-row-end: 4;
-    }
-
-    .list2 {
-        grid-row-start: 4;
-        /* Start at the top of the sidebar */
-        grid-row-end: 5;
-    }
-
-    .list3 {
-        grid-row-start: 5;
-        /* Start at the top of the sidebar */
-        grid-row-end: 6;
-    }
-
-    .list4 {
-        grid-row-start: 6;
-        /* Start at the top of the sidebar */
-        grid-row-end: 7;
-    }
-
-    .list5 {
-        grid-row-start: 7;
-        /* Start at the top of the sidebar */
-        grid-row-end: 8;
-    }
-
-    .list6 {
-        grid-row-start: 8;
-        /* Start at the top of the sidebar */
-        grid-row-end: 9;
-    }
-
-    .list7 {
-        grid-row-start: 9;
-        /* Start at the top of the sidebar */
-        grid-row-end: 10;
-    }
-
-    .list8 {
-        grid-row-start: 10;
-        /* Start at the top of the sidebar */
-        grid-row-end: 11;
-    }
-    .list10 {
-        grid-row-start: 11;
-        /* Start at the top of the sidebar */
-        grid-row-end: 12;
-    }
-    .list9 {
-        grid-row-start: 12;
-        /* Start at the top of the sidebar */
-        grid-row-end: 13;
-    }
-
-    .container {
-        grid-template-rows: repeat(10, 1fr);
-        /* grid-template-columns: 1fr 1fr 1fr; */
-        grid-template-columns: repeat(5, 1fr);
-
-    }
-
-    .header,
-    .footer {
-        grid-column-start: 2;
-        grid-column-end: 6;
-        display: inline-flex;
-        justify-content: center;
-        align-items: center;
-        background: rgb(78, 215, 255);
-        background: linear-gradient(90deg, rgba(78, 215, 255, 1) 0%, rgba(196, 251, 255, 1) 44%);
-        border: 1px solid rgb(32, 9, 148);
-        /* box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.5); */
-    }
-
-
-
-    .content{
-        grid-column-start: 2;
-        grid-column-end: 6;
-        grid-row-start: 2;
-        grid-row-end: 10;
-        background: rgb(78, 215, 255);
-        background: linear-gradient(90deg, rgba(78, 215, 255, 1) 0%, rgba(196, 251, 255, 1) 44%);
-        border: 1px solid rgb(32, 9, 148);
-        /* box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.5); */
-    }
-
-    li {
-        font-size: calc(0.8rem + 0.8vw);
-    }
-
-    a {
-        font-size: calc(0.7rem + 0.7vw);
     }
 }

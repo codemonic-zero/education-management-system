@@ -1,32 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
 }
 
 body {
     height: calc(100vh - 100px);
-    /* Adjust height to account for margin */
     width: calc(100vw - 100px);
-    /* Adjust width to account for margin */
-    /* background-image: url("../images/home/body-bg.png"); */
     background-color: whitesmoke;
     background-size: cover;
     background-repeat: no-repeat;
+    font-family: "Inter", sans-serif;
 }
 
 .container {
     height: 100vh;
     width: 100vw;
-    /* background-image: url("../images/home/body-bg.png"); */
     display: grid;
-        /* grid-template-rows: 1fr 1fr;*/
-    /* grid-template-rows: repeat(4,1fr);*/
-    /* grid-template-columns: 1fr 1fr 1fr; 
-    grid-template-columns: repeat(3,1fr); */
+    flex-direction: column;
     grid-template-columns: repeat(1, 1fr);
     grid-template-rows: repeat(6, 1fr);
-    overflow-y: auto; /* Add scrollbar for vertical overflow */
 }
 
 .item {
@@ -36,46 +32,41 @@ body {
     justify-content: center;
     align-items: center;
     opacity: 1;
-    /* font-size: 2.3rem; */
+}
+
+.item .content1 {
+    flex: 1;
+    overflow-y: auto;
+    padding-bottom: 1rem;
 }
 
 .logo {
-    width: 10vw;
-    height: 15vh;
-    /* overflow: hidden; Prevent content from spilling out */
+    width: 20vw;
+    height: 20vh;
+    object-fit: contain;
+    box-sizing: border-box;
 }
 
 .sidebar {
     display: grid;
     grid-template-rows: auto 1fr auto;
     grid-template-columns: 1fr;
-    /* overflow: hidden; */
-    /* Prevent content from spilling out */
+    overflow-y: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
 }
 
-.logo {
-    width: 100%;
-    height: 10vh;
-    object-fit: contain;
-    box-sizing: border-box;
-}
-.card{
-    display: flex;
-}
 ul {
     display: grid;
     grid-template-rows: repeat(3, auto);
     justify-content: center;
     align-content: center;
-    
 }
 
 li {
     height: 8vh;
     width: 40vh;
-    /* Full width of the sidebar */
     max-width: 40vh;
-    /* Maximum width */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -83,25 +74,41 @@ li {
     font-weight: bold;
     margin: 0 auto;
     font-size: calc(1rem + 1vw);
-
-    /* Center the li if smaller than max-width */
 }
 
 a {
-    font-size: calc(0.7rem + 0.7vw);
+    font-size: calc(0.1rem + 0.1vw);
     white-space: nowrap;
-    /* Prevent text wrapping */
+    color: navy;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
     overflow: hidden;
     text-overflow: ellipsis;
+    text-decoration: none;
 }
 
 li:hover {
-    font-size: 25px;
+    font-size: 15px;
     font-weight: bold;
     background-color: rgb(32, 9, 148);
-    background-color: linear-gradient(90deg, rgba(32, 9, 148, 1) 0%, rgba(53, 51, 205, 1) 44%);
+    background-color: linear-gradient(90deg, rgba(32, 9, 148, 1) 0%, rgb(102, 100, 237) 44%);
     color: aliceblue;
-    border-radius: 20px;
+    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.5);
+}
+
+.list9:hover {
+    background-color: linear-gradient(90deg, rgba(32, 9, 148, 1) 0%, rgb(102, 100, 237) 44%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+}
+
+.btn:hover {
+    background-color: linear-gradient(90deg, rgba(32, 9, 148, 1) 0%, rgb(102, 100, 237) 44%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
 }
 
 li:hover a {
@@ -112,50 +119,23 @@ li:hover a {
     color: transparent;
 }
 
-a {
-    text-decoration: none;
-    /* color: blue; */
-}
-
-h1 {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-}
-
-/* .header, .footer{
-    position:fixed;
-    height: 20vh;
-    width: 80vw;
-} */
-
 @media (min-width:768px) {
-    .container{
-        grid-template-columns: repeat(5, 1fr);
-        
-    }
     .sidebar {
         display: grid;
-        /* Enable grid layout inside sidebar */
         grid-template-rows: repeat(11, 1fr);
-        /* Define 8 rows inside sidebar */
         grid-row-start: 1;
-        grid-row-end: 13;
-        /* Adjusted to span 9 rows */
+        grid-row-end: 14;
         background: rgb(78, 215, 255);
         background: linear-gradient(90deg, rgba(78, 215, 255, 1) 0%, rgba(196, 251, 255, 1) 44%);
-        border: 1px solid  rgb(32, 9, 148);
+        border: 1px solid rgb(32, 9, 148);
     }
 
     .logo {
         grid-column-start: 1;
-        /* Align with sidebar column */
         grid-column-end: 2;
         grid-row-start: 1;
-        /* Start at the top of the sidebar */
         grid-row-end: 2;
         height: 8vh;
-
     }
 
     .list1,
@@ -166,66 +146,69 @@ h1 {
     .list6,
     .list7,
     .list8,
-    .list9 {
+    .list9,
+    .list10 {
         grid-column-start: 1;
-        /* Align with sidebar column */
         grid-column-end: 2;
     }
 
-    .list1 {
+    .btn {
         grid-row-start: 2;
-        /* Start at the top of the sidebar */
         grid-row-end: 3;
     }
 
-    .list2 {
+    .list1 {
         grid-row-start: 3;
-        /* Start at the top of the sidebar */
         grid-row-end: 4;
     }
 
-    .list3 {
+    .list2 {
         grid-row-start: 4;
-        /* Start at the top of the sidebar */
         grid-row-end: 5;
     }
 
-    .list4 {
+    .list3 {
         grid-row-start: 5;
-        /* Start at the top of the sidebar */
         grid-row-end: 6;
     }
 
-    .list5 {
+    .list4 {
         grid-row-start: 6;
-        /* Start at the top of the sidebar */
         grid-row-end: 7;
     }
 
-    .list6 {
+    .list5 {
         grid-row-start: 7;
-        /* Start at the top of the sidebar */
         grid-row-end: 8;
     }
-    .list7 {
+
+    .list6 {
         grid-row-start: 8;
-        /* Start at the top of the sidebar */
         grid-row-end: 9;
     }
-    .list8 {
+
+    .list7 {
         grid-row-start: 9;
-        /* Start at the top of the sidebar */
         grid-row-end: 10;
     }
-    .list9 {
+
+    .list8 {
         grid-row-start: 10;
-        /* Start at the top of the sidebar */
         grid-row-end: 11;
     }
 
+    .list10 {
+        grid-row-start: 11;
+        grid-row-end: 12;
+    }
+
+    .list9 {
+        grid-row-start: 12;
+        grid-row-end: 13;
+    }
+
     .container {
-        grid-template-rows: repeat(8, 1fr);
-        /* grid-template-columns: 1fr 1fr 1fr; */
+        grid-template-rows: repeat(10, 1fr);
         grid-template-columns: repeat(5, 1fr);
     }
 
@@ -238,7 +221,19 @@ h1 {
         align-items: center;
         background: rgb(78, 215, 255);
         background: linear-gradient(90deg, rgba(78, 215, 255, 1) 0%, rgba(196, 251, 255, 1) 44%);
-        border: 1px solid  rgb(32, 9, 148);
+        border: 1px solid rgb(32, 9, 148);
+    }
+
+    .content1 {
+        grid-column-start: 2;
+        grid-column-end: 6;
+        grid-row-start: 2;
+        grid-row-end: 10;
+        background: rgb(78, 215, 255);
+        background: linear-gradient(90deg, rgba(78, 215, 255, 1) 0%, rgba(196, 251, 255, 1) 44%);
+        border: 1px solid rgb(32, 9, 148);
+        overflow-y: auto; /* Add scrollbar for vertical overflow */
+
     }
 
     li {
@@ -250,18 +245,11 @@ h1 {
     }
 }
 
-.content1 {
-    grid-column-start: 2;
-    grid-column-end: 6;
-    grid-row-start: 2;
-    grid-row-end: 8;
-    background: rgb(78, 215, 255);
-    background: linear-gradient(90deg, rgba(78, 215, 255, 1) 0%, rgba(196, 251, 255, 1) 44%);
-    border: 1px solid  rgb(32, 9, 148);
-    overflow-y: auto; /* Add scrollbar for vertical overflow */
+.card{
+    display: flex;
 }
 
-.item content1{
+.item .content{
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
