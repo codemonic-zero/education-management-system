@@ -13,7 +13,6 @@ body {
     background-color: whitesmoke;
     background-size: cover;
     background-repeat: no-repeat;
-    overflow: hidden;
 }
 
 .container {
@@ -27,7 +26,7 @@ body {
     grid-template-columns: repeat(3,1fr); */
     grid-template-columns: repeat(1, 1fr);
     grid-template-rows: repeat(6, 1fr);
-    overflow: hidden;
+    overflow-y: auto; /* Add scrollbar for vertical overflow */
 }
 
 .item {
@@ -50,7 +49,7 @@ body {
     display: grid;
     grid-template-rows: auto 1fr auto;
     grid-template-columns: 1fr;
-    overflow-y: auto;
+    /* overflow: hidden; */
     /* Prevent content from spilling out */
 }
 
@@ -277,10 +276,11 @@ h1 {
     flex-direction: column;
     width: 30%;
     margin: 35px;
-    background-color: white;
-    border-radius: 20px;
+    background-color: whitesmoke;
+    border-radius: 0px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     overflow: hidden;
+    border-radius: 40px;
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
@@ -304,13 +304,15 @@ h1 {
 .history-info h3 {
     font-size: 18px;
     font-weight: bold;
-    color: #333;
+    /*color: #333;*/
+    color: black;
     margin-bottom: 5px;
     text-align: center;
 }
 
 .history-info p {
     font-size: 14px;
-    color: #555;
+    /*color: #555;*/
+    color: black;
     margin-bottom: 10px;
 }
