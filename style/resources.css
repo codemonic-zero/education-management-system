@@ -84,9 +84,27 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
 }
-.main container01{
+.maincontainer01{
     transition-timing-function: ease-in 3s;
+    background-color: red;
+    transform-style: flat;
+    
+    
+
 }
+.maincontainer02{
+    transition-timing-function: ease-in 5s;
+    background-color: rgb(199, 167, 167);
+    transform-style: flat;
+
+}
+.maincontainer03{
+    transition-timing-function: ease-in 6s;
+    background-color: rgb(127, 31, 31);
+    transform-style: flat;
+
+}
+
 .container {
     height: 100vh;
     width: 100vw;

@@ -26,7 +26,9 @@ body {
     align-items: center;
     padding: 10px 20px;
 }
-
+.navbar ul li a:hover{
+    color: #66e5e3;
+}
 .navbar .logo img {
     height: 85px;
 }
